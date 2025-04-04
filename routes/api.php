@@ -14,6 +14,8 @@ Route::get('/user', function (Request $request) {
 Route::get('/send_notifications', [NotificationController::class, 'sendPushNotification']);
 
 
+
+
 Route::post('register', [AuthController::class, 'register']);  // مسار التسجيل
 Route::post('login', [AuthController::class, 'login']);        // مسار الدخول
 Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:api');  // مسار تسجيل الخروج
